@@ -37,3 +37,6 @@
 
 # Other possible file names
 casino
+
+# Input files
+*.in

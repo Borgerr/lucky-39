@@ -7,7 +7,7 @@ CXXFLAGS := -Wall -Wextra -Werror -Wpedantic
 
 all: casino
 
-casino: casino.o ActionData.o config.o MenuData.o user_io.o
+casino: casino.o ActionData.o config.o MenuData.o user_io.o Deck.o
 	g++ $(CXXFLAGS) -o casino $^
 
 
@@ -28,6 +28,11 @@ MenuData.o: MenuData.cpp MenuData.h
 
 user_io.o: user_io.cpp config.h
 	g++ $(CXXFLAGS) -c -o user_io.o user_io.cpp
+
+Deck.o: Deck.cpp Deck.h
+	g++ $(CXXFLAGS) -c -o Deck.o Deck.cpp
+
+
 
 clean:
 	rm -f *.o
