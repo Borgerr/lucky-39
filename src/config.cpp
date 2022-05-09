@@ -2,6 +2,7 @@
 #include "config.h"
 #include "MenuData.h"
 #include "ActionData.h"
+#include "Deck.h"
 
 void showMenu(MenuData& md, ActionData& ad) {
 	std::vector<std::string> commands = md.getNames();
@@ -28,6 +29,9 @@ void takeAction(const std::string& choice, MenuData& md, ActionData& ad) {
 int casinoMenu(std::istream& is, std::ostream& os) {
 	ActionData ad(is, os);
 	MenuData md;
+	Deck *ptr;
+	ptr = new Deck;
+	ad.setDeck(ptr);
 	configureMenu(md);
 	std::string choice;
 
