@@ -29,4 +29,11 @@ void commentLine(ActionData& ad);
 
 void quit(ActionData& ad);
 
+// options.cpp declarations
+void shuffleDeck(ActionData& ad);
+
+void topCard(ActionData& ad);
+
+void drawCard(ActionData& ad);
+
 #endif //__CONFIG_H_

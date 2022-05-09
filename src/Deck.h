@@ -11,6 +11,8 @@ public:
 	std::vector<std::string> drawMultiple(const int& size);
 	void shuffle();
 	std::string intToCard(const int& value) const;
+	std::string expandString(const std::string& value) const;
+	// given shortened string value, returns a lengthened string interpretation
 	~Deck();
 private:
 	std::vector<std::string> mDeckList;

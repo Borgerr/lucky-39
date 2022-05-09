@@ -45,6 +45,9 @@ int casinoMenu(std::istream& is, std::ostream& os) {
 void configureMenu(MenuData& md) {
 	//USE THE FOLLOWING TEMPLATE:
 	//md.addAction("name", function, "Long description.");
+	md.addAction("shuffle", shuffleDeck, "Shuffle the current deck.");
+	md.addAction("top-card", topCard, "Look at the top card in the deck without drawing it.");
+	md.addAction("draw-card", drawCard, "Draw a card from the top of the deck.");
 
 	//try to retain some kind of organization in this menu. Quit should be at the bottom of the list.
 	md.addAction("quit", quit, "Exit the program.");

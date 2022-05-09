@@ -11,21 +11,20 @@ Deck::~Deck() {
 }
 
 std::string Deck::draw() {
-	std::string returned = "";
+	std::string returned = "";	// indicates empty deck
 	if (!mDeckList.empty()) {
-		returned = mDeckList.back();
+		returned = getTop();
 		mDeckList.pop_back();
-		return returned;
 	}
-	return returned;	// indicates empty deck
+	return returned;
 }
 
 std::string Deck::getTop() const {
-	std::string returned = "";
+	std::string returned = "";	// indicates empty deck
 	if (!mDeckList.empty()) {
 		returned = mDeckList.back();
 	}
-	return returned;	// indicates empty deck
+	return returned;
 }
 
 std::vector<std::string> Deck::drawMultiple(const int& size) {
@@ -60,161 +59,212 @@ std::string Deck::intToCard(const int& value) const {
 			// card values are interpreted with two characters at the beginning of the string,
 			// and then the full name of the card's suit is followed afterward.
 			case 1: // ace
-				cardName = "AcClubs";
+				cardName = "AClubs";
 				break;
 			case 2: // 2
-				cardName = "02Clubs";
+				cardName = "2Clubs";
 				break;
 			case 3: // 3
-				cardName = "03Clubs";
+				cardName = "3Clubs";
 				break;
 			case 4: // 4
-				cardName = "04Clubs";
+				cardName = "4Clubs";
 				break;
 			case 5: // 5
-				cardName = "05Clubs";
+				cardName = "5Clubs";
 				break;
 			case 6: // 6
-				cardName = "06Clubs";
+				cardName = "6Clubs";
 				break;
 			case 7: // 7
-				cardName = "07Clubs";
+				cardName = "7Clubs";
 				break;
 			case 8: // 8
-				cardName = "08Clubs";
+				cardName = "8Clubs";
 				break;
 			case 9: // 9
-				cardName = "09Clubs";
+				cardName = "9Clubs";
 				break;
 			case 10:// 10
-				cardName = "10Clubs";
+				cardName = "TClubs";
 				break;
 			case 11:// jack
-				cardName = "JaClubs";
+				cardName = "JClubs";
 				break;
 			case 12:// queen
-				cardName = "QuClubs";
+				cardName = "QClubs";
 				break;
 			case 13:// king
-				cardName = "KiClubs";
+				cardName = "KClubs";
 				break;
 			case 14:
-				cardName = "AcSpades";
+				cardName = "ASpades";
 				break;
 			case 15:
-				cardName = "02Spades";
+				cardName = "2Spades";
 				break;
 			case 16:
-				cardName = "03Spades";
+				cardName = "3Spades";
 				break;
 			case 17:
-				cardName = "04Spades";
+				cardName = "4Spades";
 				break;
 			case 18:
-				cardName = "05Spades";
+				cardName = "5Spades";
 				break;
 			case 19:
-				cardName = "06Spades";
+				cardName = "6Spades";
 				break;
 			case 20:
-				cardName = "07Spades";
+				cardName = "7Spades";
 				break;
 			case 21:
-				cardName = "08Spades";
+				cardName = "8Spades";
 				break;
 			case 22:
-				cardName = "09Spades";
+				cardName = "9Spades";
 				break;
 			case 23:
-				cardName = "10Spades";
+				cardName = "TSpades";
 				break;
 			case 24:
-				cardName = "JaSpades";
+				cardName = "JSpades";
 				break;
 			case 25:
-				cardName = "QuSpades";
+				cardName = "QSpades";
 				break;
 			case 26:
-				cardName = "KiSpades";
+				cardName = "KSpades";
 				break;
 			case 27:
-				cardName = "AcHearts";
+				cardName = "AHearts";
 				break;
 			case 28:
-				cardName = "02Hearts";
+				cardName = "2Hearts";
 				break;
 			case 29:
-				cardName = "03Hearts";
+				cardName = "3Hearts";
 				break;
 			case 30:
-				cardName = "04Hearts";
+				cardName = "4Hearts";
 				break;
 			case 31:
-				cardName = "05Hearts";
+				cardName = "5Hearts";
 				break;
 			case 32:
-				cardName = "06Hearts";
+				cardName = "6Hearts";
 				break;
 			case 33:
-				cardName = "07Hearts";
+				cardName = "7Hearts";
 				break;
 			case 34:
-				cardName = "08Hearts";
+				cardName = "8Hearts";
 				break;
 			case 35:
-				cardName = "09Hearts";
+				cardName = "9Hearts";
 				break;
 			case 36:
-				cardName = "10Hearts";
+				cardName = "THearts";
 				break;
 			case 37:
-				cardName = "JaHearts";
+				cardName = "JHearts";
 				break;
 			case 38:
-				cardName = "QuHearts";
+				cardName = "QHearts";
 				break;
 			case 39:
-				cardName = "KiHearts";
+				cardName = "KHearts";
 				break;
 			case 40:
-				cardName = "AcDiamonds";
+				cardName = "ADiamonds";
 				break;
 			case 41:
-				cardName = "02Diamonds";
+				cardName = "2Diamonds";
 				break;
 			case 42:
-				cardName = "03Diamonds";
+				cardName = "3Diamonds";
 				break;
 			case 43:
-				cardName = "04Diamonds";
+				cardName = "4Diamonds";
 				break;
 			case 44:
-				cardName = "05Diamonds";
+				cardName = "5Diamonds";
 				break;
 			case 45:
-				cardName = "06Diamonds";
+				cardName = "6Diamonds";
 				break;
 			case 46:
-				cardName = "07Diamonds";
+				cardName = "7Diamonds";
 				break;
 			case 47:
-				cardName = "08Diamonds";
+				cardName = "8Diamonds";
 				break;
 			case 48:
-				cardName = "09Diamonds";
+				cardName = "9Diamonds";
 				break;
 			case 49:
-				cardName = "10Diamonds";
+				cardName = "TDiamonds";
 				break;
 			case 50:
-				cardName = "JaDiamonds";
+				cardName = "JDiamonds";
 				break;
 			case 51:
-				cardName = "QuDiamonds";
+				cardName = "QDiamonds";
 				break;
 			case 52:
-				cardName = "KiDiamonds";
+				cardName = "KDiamonds";
 				break;
 		}
 	return cardName;
+}
+
+std::string Deck::expandString(const std::string& value) const {
+	// Value string should be given as the same kind of output given by intToCard.
+	// Function aims to return a more expanded version of the input value string,
+	// making interpretation and output easier in the long run.
+	char firstChar = value[0];			// gives first character in value string
+	std::string returned = "";			// added onto and returned
+	switch (firstChar) {
+		case 'A':
+			returned += "Ace of ";
+			break;
+		case '2':
+			returned += "Two of ";
+			break;
+		case '3':
+			returned += "Three of ";
+			break;
+		case '4':
+			returned += "Four of ";
+			break;
+		case '5':
+			returned += "Five of ";
+			break;
+		case '6':
+			returned += "Six of ";
+			break;
+		case '7':
+			returned += "Seven of ";
+			break;
+		case '8':
+			returned += "Eight of ";
+			break;
+		case '9':
+			returned += "Nine of ";
+			break;
+		case 'T':
+			returned += "Ten of ";
+			break;
+		case 'J':
+			returned += "Jack of ";
+			break;
+		case 'Q':
+			returned += "Queen of ";
+			break;
+		case 'K':
+			returned += "King of ";
+			break;
+	}
+	returned += value.substr(1, (value.length() - 1));
+	return returned;
 }
