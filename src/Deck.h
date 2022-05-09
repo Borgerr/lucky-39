@@ -7,7 +7,7 @@ class Deck {
 public:
 	Deck();
 	std::string draw();		// returns empty string if decklist empty
-	std::string& getTop() const;	// returns empty string if decklist empty
+	std::string getTop() const;	// returns empty string if decklist empty
 	std::vector<std::string> drawMultiple(const int& size);
 	void shuffle();
 	std::string intToCard(const int& value) const;
