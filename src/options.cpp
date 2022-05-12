@@ -14,7 +14,7 @@ void topCard(ActionData& ad) {
 }
 
 void drawCard(ActionData& ad) {
-	std::string topVal = ad.getDeck().draw();
+	std::string topVal = ad.getDeck().getTop();
 	if (topVal == "") {
 		ad.getOS() << "Deck empty. Shuffling..." << std::endl;
 		ad.getDeck().shuffle();
