@@ -22,3 +22,7 @@ void drawCard(ActionData& ad) {
 	}
 	ad.getOS() << "You drew the " << ad.getDeck().expandString(ad.getDeck().draw()) << "." << std::endl;
 }
+
+void getBalance(ActionData& ad) {
+	ad.getOS() << "Current balance: " << ad.getBalance() << std::endl;
+}

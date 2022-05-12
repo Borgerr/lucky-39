@@ -2,7 +2,7 @@
 #include "ActionData.h"
 
 ActionData::ActionData(std::istream& is, std::ostream& os) 
-	: mIs(is), mOs(os), done(false), mDeck(0) {
+	: mIs(is), mOs(os), done(false), mDeck(0), mBalance(1000) {
 }
 
 std::istream& ActionData::getIS() {
@@ -36,4 +36,8 @@ void ActionData::setDeck(Deck* deck) {
 		delete mDeck;
 	}
 	mDeck = deck;
+}
+
+int ActionData::getBalance() const {
+	return mBalance;
 }

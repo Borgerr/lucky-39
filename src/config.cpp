@@ -46,6 +46,7 @@ void configureMenu(MenuData& md) {
 	//USE THE FOLLOWING TEMPLATE:
 	//md.addAction("name", function, "Long description.");
 	md.addAction("shuffle", shuffleDeck, "Shuffle the current deck.");
+	md.addAction("balance", getBalance, "View your current balance at the Lucky-39 casino.");
 	md.addAction("top-card", topCard, "Look at the top card in the deck without drawing it.");
 	md.addAction("draw-card", drawCard, "Draw a card from the top of the deck.");
 

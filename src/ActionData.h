@@ -14,11 +14,13 @@ public:
 	Deck& getDeck();
 	void setDeck(Deck* deck);
 	~ActionData();
+	int getBalance() const;
 protected:
 	std::istream& mIs;
 	std::ostream& mOs;
 	bool done;
 	Deck* mDeck;
+	int mBalance;
 };
 
 #endif //__ACTIONDATA_

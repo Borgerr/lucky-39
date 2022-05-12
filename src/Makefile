@@ -36,6 +36,11 @@ Deck.o: Deck.cpp Deck.h
 options.o: options.cpp config.h
 	$(CXX) $(CXXFLAGS) -c -o options.o options.cpp
 
+games.o: games.cpp config.h
+	$(CXX) $(CXXFLAGS) -c -o games.o games.cpp
+
+
+
 
 
 clean:

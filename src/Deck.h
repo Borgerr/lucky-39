@@ -9,7 +9,7 @@ public:
 	std::string draw();		// returns empty string if decklist empty
 	std::string getTop() const;	// returns empty string if decklist empty
 	std::vector<std::string> drawMultiple(const int& size);
-	void shuffle();
+	void shuffle();			// also resets entire deck to be max size
 	std::string intToCard(const int& value) const;
 	std::string expandString(const std::string& value) const;
 	// given shortened string value, returns a lengthened string interpretation

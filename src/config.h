@@ -36,4 +36,9 @@ void topCard(ActionData& ad);
 
 void drawCard(ActionData& ad);
 
+void getBalance(ActionData& ad);
+
+// games.cpp declarations
+int blackjack(ActionData& ad);
+
 #endif //__CONFIG_H_
