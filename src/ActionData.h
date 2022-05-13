@@ -15,6 +15,7 @@ public:
 	void setDeck(Deck* deck);
 	~ActionData();
 	int getBalance() const;
+	void setBalance(const int& balance);
 protected:
 	std::istream& mIs;
 	std::ostream& mOs;

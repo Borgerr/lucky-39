@@ -41,3 +41,9 @@ void ActionData::setDeck(Deck* deck) {
 int ActionData::getBalance() const {
 	return mBalance;
 }
+
+void ActionData::getBalance(const int& balance) {
+	if (balance <= 0) {
+		mBalance = balance;
+	}
+}
