@@ -4,6 +4,35 @@
 
 Deck::Deck() {
 	shuffle();
+	// initialize valueInitials keys and values
+	valueInitials['A'] = "Ace";
+	valueInitials['2'] = "Two";
+	valueInitials['3'] = "Three";
+	valueInitials['4'] = "Four";
+	valueInitials['5'] = "Five";
+	valueInitials['6'] = "Six";
+	valueInitials['7'] = "Seven";
+	valueInitials['8'] = "Eight";
+	valueInitials['9'] = "Nine";
+	valueInitials['T'] = "Ten";
+	valueInitials['J'] = "Jack";
+	valueInitials['Q'] = "Queen";
+	valueInitials['K'] = "King";
+	
+	// initialize blackjackValues keys and values
+	blackjackValues['A'] = 11;
+	blackjackValues['2'] = 2;
+	blackjackValues['3'] = 3;
+	blackjackValues['4'] = 4;
+	blackjackValues['5'] = 5;
+	blackjackValues['6'] = 6;
+	blackjackValues['7'] = 7;
+	blackjackValues['8'] = 8;
+	blackjackValues['9'] = 9;
+	blackjackValues['T'] = 10;
+	blackjackValues['J'] = 10;
+	blackjackValues['Q'] = 10;
+	blackjackValues['K'] = 10;
 }
 
 Deck::~Deck() {
@@ -218,53 +247,18 @@ std::string Deck::intToCard(const int& value) const {
 	return cardName;
 }
 
-std::string Deck::expandString(const std::string& value) const {
+std::string Deck::expandString(const std::string& value) {
 	// Value string should be given as the same kind of output given by intToCard.
 	// Function aims to return a more expanded version of the input value string,
 	// making interpretation and output easier in the long run.
 	char firstChar = value[0];			// gives first character in value string
 	std::string returned = "";			// added onto and returned
-	switch (firstChar) {
-		case 'A':
-			returned += "Ace of ";
-			break;
-		case '2':
-			returned += "Two of ";
-			break;
-		case '3':
-			returned += "Three of ";
-			break;
-		case '4':
-			returned += "Four of ";
-			break;
-		case '5':
-			returned += "Five of ";
-			break;
-		case '6':
-			returned += "Six of ";
-			break;
-		case '7':
-			returned += "Seven of ";
-			break;
-		case '8':
-			returned += "Eight of ";
-			break;
-		case '9':
-			returned += "Nine of ";
-			break;
-		case 'T':
-			returned += "Ten of ";
-			break;
-		case 'J':
-			returned += "Jack of ";
-			break;
-		case 'Q':
-			returned += "Queen of ";
-			break;
-		case 'K':
-			returned += "King of ";
-			break;
-	}
-	returned += value.substr(1, (value.length() - 1));
+	returned += valueInitials[firstChar];
+	returned += (" of " + value.substr(1, (value.length() - 1)));
 	return returned;
+}
+
+int Deck::blackjackValue(const std::string& value) {
+	char firstChar = value[0];
+	return blackjackValues[firstChar];
 }
