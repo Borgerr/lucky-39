@@ -59,7 +59,7 @@ std::string Deck::getTop() const {
 std::vector<std::string> Deck::drawMultiple(const int& size) {
 	int i;
 	std::vector<std::string> returned;
-	returned.resize(size);
+	//returned.resize(size);	// vector::push_back() method resizes the vector with the next iterated number anyway.
 	std::string tempCard;
 	for (i = 0; i < size; i++) {
 		tempCard = draw();

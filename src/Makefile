@@ -1,14 +1,14 @@
 #variables
 #variable name := tags
 #used with $(VARNAME)
-CXX := $(CXX)
+CXX := g++
 CXXFLAGS := -Wall -Wextra -Werror -Wpedantic
 #CXXFLAGS := -Wall -Wextra -Werror -Wpedantic -g #debugger
 #executable programs
 
 all: casino
 
-casino: casino.o ActionData.o config.o MenuData.o user_io.o Deck.o options.o
+casino: casino.o ActionData.o config.o MenuData.o user_io.o Deck.o options.o games.o
 	$(CXX) $(CXXFLAGS) -o casino $^
 
 
@@ -38,8 +38,6 @@ options.o: options.cpp config.h
 
 games.o: games.cpp config.h
 	$(CXX) $(CXXFLAGS) -c -o games.o games.cpp
-
-
 
 
 

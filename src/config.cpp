@@ -49,6 +49,9 @@ void configureMenu(MenuData& md) {
 	md.addAction("balance", getBalance, "View your current balance at the Lucky-39 casino.");
 	md.addAction("top-card", topCard, "Look at the top card in the deck without drawing it.");
 	md.addAction("draw-card", drawCard, "Draw a card from the top of the deck.");
+	md.addAction("draw-multiple", drawMultiple, "Draw multiple cards from the deck and show them all.");
+
+	md.addAction("blackjack", playBlackjack, "Play a round of blackjack with the Lucky-39 dealer.");
 
 	//try to retain some kind of organization in this menu. Quit should be at the bottom of the list.
 	md.addAction("quit", quit, "Exit the program.");

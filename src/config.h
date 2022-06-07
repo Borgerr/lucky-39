@@ -36,9 +36,15 @@ void topCard(ActionData& ad);
 
 void drawCard(ActionData& ad);
 
+void drawMultiple(ActionData& ad);
+
 void getBalance(ActionData& ad);
+
+void playBlackjack(ActionData& ad);
 
 // games.cpp declarations
 int blackjack(ActionData& ad);
+
+int bjHandValue(ActionData& ad, const std::vector<std::string>& hand);
 
 #endif //__CONFIG_H_
