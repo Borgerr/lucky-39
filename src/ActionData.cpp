@@ -43,7 +43,7 @@ int ActionData::getBalance() const {
 }
 
 void ActionData::setBalance(const int& balance) {
-	if (balance <= 0) {
+	if (balance > 0) {
 		mBalance = balance;
 	}
 }
