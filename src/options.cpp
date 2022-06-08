@@ -41,4 +41,5 @@ void getBalance(ActionData& ad) {
 
 void playBlackjack(ActionData& ad) {
 	ad.setBalance(ad.getBalance() + blackjack(ad));
+	ad.getOS() << "Your current balance is now: " << ad.getBalance() << std::endl;
 }
