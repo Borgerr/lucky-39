@@ -14,6 +14,8 @@ public:
 	std::string intToCard(const int& value) const;
 	std::string expandString(const std::string& value);
 	// given shortened string value, returns a lengthened string interpretation
+	std::string expandHand(const std::vector<std::string>& hand);
+	// does the same thing but for the entire hand, or list of condensed strings.
 	~Deck();
 
 	// card game conversion methods

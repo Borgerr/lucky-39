@@ -249,7 +249,7 @@ std::string Deck::intToCard(const int& value) const {
 
 std::string Deck::expandString(const std::string& value) {
 	// Value string should be given as the same kind of output given by intToCard.
-	// Function aims to return a more expanded version of the input value string,
+	// Method aims to return a more expanded version of the input value string,
 	// making interpretation and output easier in the long run.
 	char firstChar = value[0];			// gives first character in value string
 	std::string returned = "";			// added onto and returned
@@ -258,6 +258,21 @@ std::string Deck::expandString(const std::string& value) {
 	return returned;
 }
 
+std::string Deck::expandHand(const std::vector<std::string>& hand) {
+	// expected vector is one of condensed strings to be expanded to card values.
+	// method aims to simply return the "hand" of a player by showing each card
+	// separated by commas.
+	std::string returned = "";
+	int i, maxSize;
+	maxSize = hand.size();
+	for (i = 0; i < maxSize-1; i++) {
+		returned += expandString(hand[i]) + ", ";	// goes only until the second to last element so as to retain comma seperation
+	}
+	returned += expandString(hand[maxSize-1]);		// the last element in the hand should be treated differently to ensure no commas at the end
+	return returned;
+}
+
+// card game conversion methods
 int Deck::blackjackValue(const std::string& value) {
 	char firstChar = value[0];
 	return blackjackValues[firstChar];
